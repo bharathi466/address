@@ -237,3 +237,5 @@ Note: same with other countries implementations and tested.
 
 1) Improved junit coverage to 100% line coverage on service classes.
 2) Added new Util class RandomBoolean.java used by all the Country implementations to get random boolean value to populate optional fields.
+    Wrapped static method call(LocalThreadRandom.current) in an instance method getNextBoolean() to unitTest easily.
+    
