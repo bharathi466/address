@@ -17,7 +17,7 @@ plugins {
 apply plugin: 'spring-cloud-contract'
 
 group = 'com.random'
-version = '0.0.1-SNAPSHOT'
+version = '0.0.2-SNAPSHOT'
 sourceCompatibility = '1.8'
 
 configurations {
@@ -45,7 +45,7 @@ dependencies {
         exclude group: 'org.junit.vintage', module: 'junit-vintage-engine'
     }
     testImplementation 'org.springframework.cloud:spring-cloud-starter-contract-verifier'
-}
+   }
 
 dependencyManagement {
     imports {

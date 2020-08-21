@@ -3,16 +3,21 @@ package com.random.address.service;
 import com.github.javafaker.Faker;
 import com.random.address.model.Address;
 import com.random.address.model.Countries;
-import com.random.address.util.StatesAndCodes;
+import com.random.address.util.RandomBoolean;
 import lombok.extern.log4j.Log4j2;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.Locale;
-import java.util.concurrent.ThreadLocalRandom;
+
 
 @Service
 @Log4j2
 public class Mexico implements Country {
+
+    @Autowired
+    RandomBoolean randomBoolean;
+
     @Override
     public Address constructAddress() {
         log.debug(() -> "construct Mexico address");
@@ -25,8 +30,8 @@ public class Mexico implements Country {
                 .postalCode(address.zipCode())
                 .city(city)
                 .county(city)
-                .stateCode(ThreadLocalRandom.current().nextBoolean() ? stateAbbr : null)
-                .state(ThreadLocalRandom.current().nextBoolean() ? getState(stateAbbr) : null)
+                .stateCode(randomBoolean.getNextBoolean() ? stateAbbr : null)
+                .state(randomBoolean.getNextBoolean() ? getState(stateAbbr) : null)
                 .country(Countries.MEX.countryName)
                 .countryCode(getCountry())
                 .build();

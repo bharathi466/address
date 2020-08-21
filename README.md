@@ -231,3 +231,9 @@ Note: same with other countries implementations and tested.
 * Case 6: with country=IND (selecting country code not implemented yet or a wrong code.)
 
 ![400](images/400.JPG)
+
+
+### Enhancements in 0.0.2-SNAPSHOT
+
+1) Improved junit coverage to 100% line coverage on service classes.
+2) Added new Util class RandomBoolean.java used by all the Country implementations to get random boolean value to populate optional fields.
