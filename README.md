@@ -2,7 +2,7 @@
 
 ## Requirements
 
-As part of this code challenge, I need to implement a REST HTTP service that can generate a random address.
+Implement a REST HTTP service that can generate a random address.
 
 As a member of the test engineering team, I'm expected to implement the service following the technical specifications described below.
 
