@@ -1,4 +1,4 @@
-# SDET Code Challenge - Random Address Generator
+#Random Address Generator
 
 ## Requirements
 
